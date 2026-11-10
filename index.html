@@ -42,8 +42,8 @@
 
   /* hero */
   .hero{background:
-      linear-gradient(110deg,rgba(22,32,44,.95) 35%,rgba(22,32,44,.6)),
-      repeating-linear-gradient(45deg,#24303e 0 2px,transparent 2px 22px),
+      linear-gradient(110deg,rgba(22,32,44,.96) 35%,rgba(22,32,44,.65)),
+      url(img/hero.jpg) center/cover no-repeat,
       #1d2836;
     color:#fff;padding:120px 0 110px}
   .hero h1{font-size:clamp(2rem,5vw,3.4rem);max-width:760px;margin-bottom:20px}
@@ -56,10 +56,15 @@
 
   /* about */
   .about{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-  .about-visual{aspect-ratio:4/3;border-radius:14px;background:
-      linear-gradient(160deg,var(--brand) 0 30%,transparent 30%),
-      linear-gradient(0deg,var(--dark),#2c3a4b);position:relative;overflow:hidden}
-  .about-visual::after{content:"Фото объекта";position:absolute;inset:auto 20px 20px auto;color:#aab4c0;font-size:.85rem}
+  .about-visual{aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:16px 16px 0 var(--brand)}
+  .about-visual img{width:100%;height:100%;object-fit:cover;display:block}
+  .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  .photo{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+  .photo:hover img{transform:scale(1.05)}
+  .photo figcaption{position:absolute;inset:auto 0 0 0;padding:40px 20px 18px;background:linear-gradient(transparent,rgba(15,23,32,.9));color:#fff;font-family:Montserrat;font-weight:700}
+  .note{color:var(--muted);font-size:.8rem;margin-top:12px}
+  @media (max-width:900px){.photos{grid-template-columns:1fr}}
   .checks{list-style:none;margin-top:22px;display:grid;gap:12px}
   .checks li{padding-left:30px;position:relative}
   .checks li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--brand);color:var(--dark);font-size:.75rem;display:grid;place-items:center;font-weight:700}
@@ -174,7 +179,7 @@
         <li>Категория ААА в реестре поставщиков Жамбылской области 2026</li>
       </ul>
     </div>
-    <div class="about-visual" role="img" aria-label="Место для фотографии объекта"></div>
+    <div class="about-visual"><img src="img/about.jpg" alt="Строительный кран на объекте" loading="lazy"></div>
   </div>
 </section>
 
@@ -191,6 +196,12 @@
       <div class="card"><div class="icon">🔥</div><h3>Газопроводы и трубопроводы</h3><p>Строительство газопроводов к населённым пунктам и прочих трубопроводов.</p></div>
       <div class="card"><div class="icon">♻️</div><h3>Инфраструктурные объекты</h3><p>Полигоны твёрдых бытовых отходов и другие объекты благоустройства.</p></div>
     </div>
+    <div class="photos">
+      <figure class="photo"><img src="img/school.jpg" alt="Здание школы" loading="lazy"><figcaption>Школы и учебные корпуса</figcaption></figure>
+      <figure class="photo"><img src="img/sport.jpg" alt="Спортивный зал" loading="lazy"><figcaption>Спорткомплексы и спортзалы</figcaption></figure>
+      <figure class="photo"><img src="img/pipeline.jpg" alt="Трубопровод" loading="lazy"><figcaption>Газопроводы и трубопроводы</figcaption></figure>
+    </div>
+    <p class="note">Фотографии иллюстративные.</p>
   </div>
 </section>
 

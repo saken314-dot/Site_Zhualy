@@ -13,3 +13,13 @@
 
 ## Публикация через GitHub Pages
 Settings → Pages → Source: Deploy from a branch → `main` / `(root)`.
+
+## Фотографии
+Иллюстративные фото в `img/` взяты с Pexels (бесплатная лицензия Pexels, указание автора не обязательно):
+- hero.jpg — pexels.com/photo/5505125
+- about.jpg — pexels.com/photo/14169558
+- school.jpg — pexels.com/photo/17144608
+- sport.jpg — pexels.com/photo/5407033
+- pipeline.jpg — pexels.com/photo/16067732
+
+Когда появятся фото собственных объектов, замените файлы с теми же именами.
