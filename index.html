@@ -113,6 +113,17 @@
   form button{border:0;cursor:pointer;font:inherit}
   .contacts .todo{background:#3a3220;color:#ffd77a}
 
+  .lic-head{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  .lic-head div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:10px;padding:16px 18px}
+  .lic-head b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+  .lic-head span{font-family:Montserrat;font-weight:700}
+  .lic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+  .lic{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .lic h3{font-size:1rem;margin-bottom:12px}
+  .lic ul{list-style:none;display:grid;gap:8px}
+  .lic li{font-size:.9rem;color:var(--muted);padding-left:16px;position:relative}
+  .lic li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+  @media (max-width:900px){.lic-head{grid-template-columns:1fr 1fr}.lic-grid{grid-template-columns:1fr}}
   footer{background:#0f1720;color:#7d8a99;font-size:.88rem;padding:26px 0}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
@@ -141,6 +152,7 @@
       <ul onclick="this.classList.remove('open')">
         <li><a href="#about">О компании</a></li>
         <li><a href="#services">Услуги</a></li>
+        <li><a href="#license">Лицензия</a></li>
         <li><a href="#projects">Объекты</a></li>
         <li><a href="#contacts">Контакты</a></li>
       </ul>
@@ -174,6 +186,7 @@
       <p class="lead">ТОО «ЖУАЛЫСТРОЙБИЗНЕС» зарегистрировано в 2003 году в Таразе. За это время компания построила спортивные комплексы и школы, провела капитальный ремонт десятка школ, проложила газопровод и сдала объекты в Жамбылской и Туркестанской областях и в Шымкенте. Основные заказчики — акиматы, отделы образования и государственные учреждения.</p>
       <ul class="checks">
         <li>Опыт работы на государственных объектах с 2009 года</li>
+        <li>Генеральная государственная лицензия на строительно-монтажные работы, II категория</li>
         <li>Участник государственных закупок Республики Казахстан</li>
         <li>Категория ААА в реестре поставщиков Жамбылской области 2026</li>
       </ul>
@@ -201,6 +214,46 @@
       <figure class="photo"><img src="img/pipeline.jpg" alt="Трубопровод" loading="lazy"><figcaption>Газопроводы и трубопроводы</figcaption></figure>
     </div>
     <p class="note">Фотографии иллюстративные.</p>
+  </div>
+</section>
+
+<section id="license">
+  <div class="wrap">
+    <div class="eyebrow">Лицензия</div>
+    <h2>Государственная лицензия на строительно-монтажные работы</h2>
+    <p class="lead">Лицензия выдана Комитетом по делам строительства и жилищно-коммунального хозяйства Министерства регионального развития Республики Казахстан. Приложения к лицензии выданы в 2013 и 2014 годах.</p>
+    <div class="lic-head">
+      <div><b>Номер</b><span>ГСЛ-СМР № 001276</span></div>
+      <div><b>Дата выдачи</b><span>13.06.2003</span></div>
+      <div><b>Вид лицензии</b><span>Генеральная</span></div>
+      <div><b>Категория</b><span>II категория</span></div>
+    </div>
+    <div class="lic-grid">
+      <div class="lic"><h3>Инженерные сети и системы</h3><ul>
+        <li>Электроснабжение, наружное и внутреннее освещение</li>
+        <li>Водоснабжение, теплоснабжение, канализация и ливневые стоки</li>
+        <li>Газоснабжение высокого, среднего и низкого давления</li>
+        <li>Капитальный ремонт и реконструкция сетей</li></ul></div>
+      <div class="lic"><h3>Здания и сооружения</h3><ul>
+        <li>Монолитные и сборные железобетонные конструкции, кладка</li>
+        <li>Кровельные работы и монтаж металлоконструкций</li>
+        <li>Мосты и мостовые переходы</li>
+        <li>Башенные и мачтовые конструкции, подъёмные сооружения</li></ul></div>
+      <div class="lic"><h3>Дороги и гидротехника</h3><ul>
+        <li>Основания и покрытия автодорог III–V категории</li>
+        <li>Проезжие части улиц населённых пунктов</li>
+        <li>Гидротехнические и селезащитные сооружения, плотины, дамбы</li></ul></div>
+      <div class="lic"><h3>Линейные сооружения</h3><ul>
+        <li>Линии электропередачи до 35 кВ и до 110 кВ и выше</li>
+        <li>Стальные резервуары, в том числе работающие под давлением</li></ul></div>
+      <div class="lic"><h3>Специальные работы в грунтах</h3><ul>
+        <li>Устройство оснований</li>
+        <li>Буровые работы</li></ul></div>
+      <div class="lic"><h3>Монтаж оборудования и пусконаладка</h3><ul>
+        <li>Объекты образовательного, спортивного и зрелищного назначения</li>
+        <li>Связь, системы контроля, сигнализации и противоаварийной защиты</li>
+        <li>Объекты электроэнергетики, водоснабжения и мелиорации</li></ul></div>
+    </div>
   </div>
 </section>
 
