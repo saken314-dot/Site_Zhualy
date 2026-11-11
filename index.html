@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>ТОО «ЖУАЛЫСТРОЙБИЗНЕС» — строительная компания, Тараз</title>
 <meta name="description" content="ТОО «ЖУАЛЫСТРОЙБИЗНЕС» — строительство и ремонт школ, спорткомплексов, газопроводов на юге Казахстана с 2003 года. БИН 030540005083.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -328,9 +330,9 @@
         <div><b>Реквизиты</b><span>БИН 030540005083</span></div>
       </div>
       <form id="form">
-        <input name="name" placeholder="Ваше имя" required>
-        <input name="phone" type="tel" placeholder="Телефон" required>
-        <textarea name="msg" placeholder="Опишите задачу"></textarea>
+        <input name="name" placeholder="Ваше имя" required maxlength="80" autocomplete="name">
+        <input name="phone" type="tel" placeholder="Телефон" required maxlength="20" pattern="[0-9\s+\(\)\-]{6,20}" autocomplete="tel">
+        <textarea name="msg" placeholder="Опишите задачу" maxlength="1000"></textarea>
         <button class="btn btn-primary" type="submit">Отправить заявку</button>
       </form>
     </div>
@@ -352,7 +354,7 @@
     e.preventDefault();
     const f = e.target;
     const text = `Заявка с сайта\nИмя: ${f.name.value}\nТелефон: ${f.phone.value}\n${f.msg.value}`;
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
 </script>
 </body>
